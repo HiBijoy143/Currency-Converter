@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="shortcut icon" type="image/jpg" href="im/icon.png">
+    <title>Currency Converter By H.I.Bijoy</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>-->
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+        
+    </style>
+
+</head>
+
+<body>
+
+    <div style="width: 100%; height: 100px; background-color: #252839; margin: auto; margin-bottom: 10px;">
+        <img src="im/icon.png" style="height: 80px; height: 80px; margin: 10px; float: left;">
+        <div class="d">
+            <h4 style="text-align: center; font-size: 20px; top: 100%;" data-text="Currency..Converter..">Currency..Converter..</h4>
+        </div>
+
+    </div>
+    <div class="icon-bar">
+        <div class="d">
+            <h4 style="margin-left: 5px; margin-right: 5px;" data-text="Developer➦">Developer➦</h4>
+        </div>
+        <a href="https://www.facebook.com/HiBijoy.a2z/" target="_blank" class="facebook"><i class="fa fa-facebook"></i></a> 
+        <a href="https://twitter.com/HiBijoy1432" target="_blank" class="twitter"><i class="fa fa-twitter"></i></a> 
+        <a href="https://sites.google.com/diu.edu.bd/hibijoy" target="_blank" class="google"><i class="fa fa-google"></i></a> 
+        <a href="https://www.linkedin.com/in/md-hasan-imam-bijoy/" target="_blank" class="linkedin"><i class="fa fa-linkedin"></i></a>
+        <a href="https://www.youtube.com/channel/UCSs0kj2hm2an1X2EBD3I79A?view_as=subscriber" target="_blank" class="youtube"><i class="fa fa-youtube"></i></a> 
+      </div>
+
+    <section class="section" id="main" style="width: 60%; margin: auto;">
+        <div class="container">
+            <div class="field">
+                <div class="control has-icons-left">
+                    <div class="select is-fullwidth">
+                        <select name="" id="currency-base">
+                            <option value="AED">AED (United Arab Emirates)</option>
+                            <option value="ARS">ARS (Argentina)</option>
+                            <option value="AUD">AUD (Australia)</option>
+                            <option value="BDT" selected>BDT (Bangladesh)</option>
+                            <option value="BGN">BGN (Bulgaria)</option>
+                            <option value="BRL">BRL (Brasil)</option>
+                            <option value="BSD">BSD (Bahamas)</option>
+                            <option value="CAD">CAD (Canada)</option>
+                            <option value="CHF">CHF (Switzerland)</option>
+                            <option value="CLP">CLP (Chile)</option>
+                            <option value="CNY">CNY (China)</option>
+                            <option value="COP">COP (Colombia)</option>
+                            <option value="CZK">CZK (Czech Republic)</option>
+                            <option value="DKK">DKK (Denmark)</option>
+                            <option value="DOP">DOP (Dominican Republic)</option>
+                            <option value="EGP">EGP (Egypt)</option>
+                            <option value="EUR">EUR (European Union)</option>
+                            <option value="FJD">FJD (Fiji)</option>
+                            <option value="GBP">GBP (United Kingdom)</option>
+                            <option value="GTQ">GTQ (Guatemala)</option>
+                            <option value="HKD">HKD (Hong Kong)</option>
+                            <option value="HRK">HRK (Croatia)</option>
+                            <option value="HUF">HUF (Hungary)</option>
+                            <option value="IDR">IDR (Indonesia)</option>
+                            <option value="ILS">ILS (Israeli shekel)</option>
+                            <option value="INR">INR (India)</option>
+                            <option value="ISK">ISK (Iceland)</option>
+                            <option value="JPY">JPY (Japan)</option>
+                            <option value="KRW">KRW (South Korea)</option>
+                            <option value="KZT">KZT (Kazakhstan)</option>
+                            <option value="MXN">MXN (Mexico)</option>
+                            <option value="MYR">MYR (Malaysia)</option>
+                            <option value="NOK">NOK (Norway)</option>
+                            <option value="NZD">NZD (New Zealand)</option>
+                            <option value="PAB">PAB (Panama)</option>
+                            <option value="PEN">PEN (Peru)</option>
+                            <option value="PHP">PHP (Philippine)</option>
+                            <option value="PKR">PKR (Paistan)</option>
+                            <option value="PLN">PLN (Poland)</option>
+                            <option value="PYG">PYG (Paraguay)</option>
+                            <option value="RON">RON (Romania)</option>
+                            <option value="RUB">RUB (Russia)</option>
+                            <option value="SAR">SAR (Saudi Arabia)</option>
+                            <option value="SEK">SEK (Sweden)</option>
+                            <option value="SGD">SGD (Singapore)</option>
+                            <option value="THB">THB (Thailand)</option>
+                            <option value="TRY">TRY (Turkey)</option>
+                            <option value="TWD">TWD (Taiwan)</option>
+                            <option value="UAH">UAH (Ukraine)</option>
+                            <option value="USD" selected>USD (United States of America)</option>
+                            <option value="UYU">UYU (Uruguay)</option>
+                            <option value="ZAR">ZAR (South Africa)</option>
+                        </select>
+                    </div>
+                    <div class="icon is-small is-left">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="field">
+                <div class="control">
+                    <input class="input" type="number" id="amount-base" placeholder="0" value="1" />
+                </div>
+            </div>
+            </br>
+            <div class="container is-fluid has-text-centered">
+                <a class="button is-success" id="swap" style="margin: 20px;">
+                    <span>
+                        <!--<span class="icon">-->
+                        <i class="fas fa-exchange-alt"></i>
+                    </span>
+                    <span><b>⥹ Swap</b></span>
+                </a>
+                <p class="field">
+                    <span id="rate"></span>
+                </p>
+            </div>
+            </br>
+
+            <div class="field">
+                <div class="control has-icons-left">
+                    <div class="select is-fullwidth">
+                        <select name="" id="currency-target">
+                            <option value="AED">AED (United Arab Emirates)</option>
+                            <option value="ARS">ARS (Argentina)</option>
+                            <option value="AUD">AUD (Australia)</option>
+                            <option value="BDT" selected>BDT (Bangladesh)</option>
+                            <option value="BGN">BGN (Bulgaria)</option>
+                            <option value="BRL">BRL (Brasil)</option>
+                            <option value="BSD">BSD (Bahamas)</option>
+                            <option value="CAD">CAD (Canada)</option>
+                            <option value="CHF">CHF (Switzerland)</option>
+                            <option value="CLP">CLP (Chile)</option>
+                            <option value="CNY">CNY (China)</option>
+                            <option value="COP">COP (Colombia)</option>
+                            <option value="CZK">CZK (Czech Republic)</option>
+                            <option value="DKK">DKK (Denmark)</option>
+                            <option value="DOP">DOP (Dominican Republic)</option>
+                            <option value="EGP">EGP (Egypt)</option>
+                            <option value="EUR">EUR (European Union)</option>
+                            <option value="FJD">FJD (Fiji)</option>
+                            <option value="GBP">GBP (United Kingdom)</option>
+                            <option value="GTQ">GTQ (Guatemala)</option>
+                            <option value="HKD">HKD (Hong Kong)</option>
+                            <option value="HRK">HRK (Croatia)</option>
+                            <option value="HUF">HUF (Hungary)</option>
+                            <option value="IDR">IDR (Indonesia)</option>
+                            <option value="ILS">ILS (Israeli shekel)</option>
+                            <option value="INR">INR (India)</option>
+                            <option value="ISK">ISK (Iceland)</option>
+                            <option value="JPY">JPY (Japan)</option>
+                            <option value="KRW">KRW (South Korea)</option>
+                            <option value="KZT">KZT (Kazakhstan)</option>
+                            <option value="MXN">MXN (Mexico)</option>
+                            <option value="MYR">MYR (Malaysia)</option>
+                            <option value="NOK">NOK (Norway)</option>
+                            <option value="NZD">NZD (New Zealand)</option>
+                            <option value="PAB">PAB (Panama)</option>
+                            <option value="PEN">PEN (Peru)</option>
+                            <option value="PHP">PHP (Philippine)</option>
+                            <option value="PKR">PKR (Paistan)</option>
+                            <option value="PLN">PLN (Poland)</option>
+                            <option value="PYG">PYG (Paraguay)</option>
+                            <option value="RON">RON (Romania)</option>
+                            <option value="RUB">RUB (Russia)</option>
+                            <option value="SAR">SAR (Saudi Arabia)</option>
+                            <option value="SEK">SEK (Sweden)</option>
+                            <option value="SGD">SGD (Singapore)</option>
+                            <option value="THB">THB (Thailand)</option>
+                            <option value="TRY">TRY (Turkey)</option>
+                            <option value="TWD">TWD (Taiwan)</option>
+                            <option value="UAH">UAH (Ukraine)</option>
+                            <option value="USD">USD (United States of America)</option>
+                            <option value="UYU">UYU (Uruguay)</option>
+                            <option value="ZAR">ZAR (South Africa)</option>
+                        </select>
+                    </div>
+                    <div class="icon is-small is-left">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="field">
+                <div class="control">
+                    <input class="input" type="number" id="amount-target" placeholder="0" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="javascript.js"></script>
+
+
+
+    <footer class="footer-all">
+
+        <div class="footer-div-text">
+            <p>Most 15 Commmon Currency</p>
+        </div>
+        <div class="card">
+            <img src="im/usd.png" class="footer-img">
+            <div class="container">
+                <p class="footer-text"><b>USD</b></p>
+                <p class="footer-text">U.S.A</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="im/eur.png" class="footer-img">
+            <div class="container">
+                <p class="footer-text"><b>EUR</b></p>
+                <p class="footer-text">European</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="im/aud.png" class="footer-img">
+
+            <div class="container">
+                <p class="footer-text"><b>AUD</b></p>
+                <p class="footer-text">Australia</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="im/inr.png" class="footer-img">
+            <div class="container">
+                <p class="footer-text"><b>INR</b></p>
+                <p class="footer-text">India</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="im/yen.png" class="footer-img">
+
+            <div class="container">
+                <p class="footer-text"><b>YEN</b></p>
+                <p class="footer-text">Japan</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="im/cad.png" class="footer-img">
+            <div class="container">
+                <p class="footer-text"><b>CAD</b></p>
+                <p class="footer-text">Canada</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="im/bdt.png" class="footer-img">
+            <div class="container">
+                <p class="footer-text"><b>BDT</b></p>
+                <p class="footer-text" style="font-size: small;">Bangladesh</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="im/cny.png" class="footer-img">
+
+            <div class="container">
+                <p class="footer-text"><b>CNY</b></p>
+                <p class="footer-text">China</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="im/dkk.png" class="footer-img">
+
+            <div class="container">
+                <p class="footer-text"><b>DKK</b></p>
+                <p class="footer-text">Denmark</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="im/sar.png" class="footer-img">
+
+            <div class="container">
+                <p class="footer-text"><b>SAR</b></p>
+                <p class="footer-text" style="font-size: 12px; margin-bottom: 4px;">Saudi Arabia</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="im/rub.png" class="footer-img">
+            <div class="container">
+                <p class="footer-text"><b>RUB</b></p>
+                <p class="footer-text">Russia</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="im/nzd.png" class="footer-img">
+            <div class="container">
+                <p class="footer-text"><b>NZD</b></p>
+                <p class="footer-text" style="font-size: 11px; margin-bottom: 4px;">New Zealand</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="im/uae.png" class="footer-img">
+            <div class="container">
+                <p class="footer-text"><b>AED</b></p>
+                <p class="footer-text">U.A.E</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="im/nok.png" class="footer-img">
+            <div class="container">
+                <p class="footer-text"><b>NOK</b></p>
+                <p class="footer-text">Norway</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="im/thb.png" class="footer-img">
+            <div class="container">
+                <p class="footer-text"><b>THB</b></p>
+                <p class="footer-text">Thailand</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
